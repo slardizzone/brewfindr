@@ -1,0 +1,31 @@
+<form class="search">
+  <fieldset>
+    <legend>Search</legend>
+    <label for="name">
+      Title:
+      <input type="search" name="name" placeholder="Search for beer!">
+    </label>
+
+    <button>Search</button>
+  </fieldset>
+</form>
+
+<script type="text/html">
+  <h1> <%%= this.beerName %> </h1>
+  <div class="<%%= this.glass %>"> <%%= this.glass %> </div>
+  <p> <%%= this.beerDescription %> </p>
+  <p> <%%= this.abv %> </p>
+  <p> <%%= this.organic %> </p>
+  <img src="<%%= this.beerLabel %>"<img>
+  <p> <%%= this.beerStyle %> </p>
+  <p> <%%= this.season %> </p>
+  <p> <%%= this.styleDescription %> </p>
+</script>
+
+
+
+
+
+
+
+

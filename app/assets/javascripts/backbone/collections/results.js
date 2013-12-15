@@ -5,7 +5,6 @@ var Results = Backbone.Collection.extend({
 
   initialize: function(opts) {
     this.name = opts.name;
-    console.log(this.name)
   },
 
   load: function() {

@@ -12,8 +12,7 @@
  *= require_tree .
  */
 
-
-
-
-/*("/assets/pint_glass.png");*/
+.results {
+ list-style: none;
+}
 

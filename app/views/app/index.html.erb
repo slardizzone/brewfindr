@@ -10,17 +10,14 @@
   </fieldset>
 </form>
 
-<script type="text/html">
-  <h1> <%%= this.beerName %> </h1>
-  <div class="<%%= this.glass %>"> <%%= this.glass %> </div>
-  <p> <%%= this.beerDescription %> </p>
-  <p> <%%= this.abv %> </p>
-  <p> <%%= this.organic %> </p>
-  <img src="<%%= this.beerLabel %>"<img>
-  <p> <%%= this.beerStyle %> </p>
-  <p> <%%= this.season %> </p>
-  <p> <%%= this.styleDescription %> </p>
+<div class="all-results">
+  <h1> Did You Mean? </h2>
+</div>
+<script type="text/html" class="search-result"> 
+   <a href="beer/?q=<%%= this.model.get('id') %>" ><%%= this.model.get("name") %></a>
 </script>
+
+
 
 
 

@@ -9,9 +9,16 @@ var Result = Beer.extend({
     $.ajax({
       url: "/beer/?q=" + this.get("id"),
       type: "GET",
-      success: console.log("worked"),
-      dataType: json
+      datatype: "JSON",
+      success: this.receiveBeer,
+      context: this
     });
+  },
+
+  receiveBeer: function(beer) {
+    console.log(beer["data"])
+    this.name = beer["data"]["name"];
+    console.log(this.name)
   }
 });
 

@@ -15,7 +15,6 @@ var Results = Backbone.Collection.extend({
   },
 
   parse: function(response) {
-    console.log(response)
     console.log(response["data"])
     return response["data"];
   }

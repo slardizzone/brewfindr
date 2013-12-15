@@ -12,7 +12,6 @@ var Router = Backbone.Router.extend({
   },
 
   getSingleBeer: function(id) {
-    console.log("This is the id " + id)
     var result = new Result({id: id})
     this.loadView(new BeerView({model: result}))
   },

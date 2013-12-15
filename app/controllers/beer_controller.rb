@@ -4,8 +4,8 @@ class BeerController < ApplicationController
     id = params[:q]
     url = "http://api.brewerydb.com/v2/beer/#{id}/?key=4145e4b2fa348277850d53216d0bd863"
     response = HTTParty.get(url)
-    binding.pry
-    render text: parsed
+    parsed = JSON(response)
+    render json: parsed
   end
   
   def search

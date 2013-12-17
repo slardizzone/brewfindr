@@ -2,19 +2,25 @@ var Router = Backbone.Router.extend({
   routes: {
     "": "index",
     "beer/search/:name": "search",
-    "beer/:id" : "getSingleBeer"
+    "beer/:id": "getSingleBeer"
   }, 
 
+  index: function() {
+    this.loadView(new IndexView)
+  },
+
+
   search: function(name) {
-    var results = new Results({name: name})
-    this.loadView(new ResultsView({collection: results}));
-    results.load();
+    var beerResults = new BeerResults({name: name});
+    this.loadView(new ResultsView({collection: beerResults}));
+    beerResults.load();
   },
 
   getSingleBeer: function(id) {
-    var result = new Result({id: id})
-    this.loadView(new BeerView({model: result}))
+    var result = new Result({id: id});
+    this.loadView(new BeerView({model: result}));
   },
+
 
   loadView: function(view) {
     this.main && this.main.remove();

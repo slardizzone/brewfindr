@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require underscore
 //= require backbone
 //= require_tree ./backbone/models
@@ -22,3 +23,4 @@
 new Router();
 new SearchFormView();
 Backbone.history.start();
+$(function(){ $(document).foundation(); });

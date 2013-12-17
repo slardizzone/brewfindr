@@ -7,6 +7,9 @@ class BeerController < ApplicationController
     parsed = JSON(response)
     render json: parsed
   end
+
+  def show
+  end
   
   def search
     encoded = URI.encode(params[:name])
@@ -15,4 +18,5 @@ class BeerController < ApplicationController
     parsed = JSON(response)
     render text: parsed
   end
+
 end

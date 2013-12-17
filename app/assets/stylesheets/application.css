@@ -8,11 +8,66 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
+
+ *= require foundation_and_overrides
+*= require_self
+
  *= require_tree .
  */
 
+body {
+
+}
+
+.top-bar {
+  color: light-blue;
+}
+
+.results a {
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+ font-size: 16px;
+ color: grey;
+}
+
+.attributes {
+  color: black;
+  font-weight: bold; 
+  font-size: 18px;
+}
+
 .results {
  list-style: none;
+ text-align: center;
 }
+
+img {
+  text-align: center;
+  margin-left: 65px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+.pint {
+  height: 400px;
+  background-image: url("/assets/new_pint_glass.png");
+  background-repeat: no-repeat;
+}
+
+.mug {
+  margin-left: 33px;
+  height: 400px;
+  background-image: url("/assets/new_beer_mug.png");
+  background-repeat: no-repeat;
+}
+
+/*.organicN {
+  background-image: url;
+}*/
+
+
 

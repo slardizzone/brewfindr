@@ -1,5 +1,5 @@
-var Results = Backbone.Collection.extend({
-  model: Result,
+var BeerResults = Backbone.Collection.extend({
+  model: Beer,
 
   url: "/beer/search/",
 
@@ -15,7 +15,6 @@ var Results = Backbone.Collection.extend({
   },
 
   parse: function(response) {
-    console.log(response["data"])
     return response["data"];
   }
 });

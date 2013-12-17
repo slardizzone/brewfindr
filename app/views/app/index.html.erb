@@ -1,24 +1,69 @@
-<form class="search">
-  <fieldset>
-    <legend>Search</legend>
-    <label for="name">
-      Title:
-      <input type="search" name="name" placeholder="Search for beer!">
-    </label>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">BrewFindr</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
-    <button>Search</button>
-  </fieldset>
-</form>
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">About BrewFindr</a></li>
+    </ul>
+  </section>
+</nav>
 
-<div class="all-results">
-  <h1> Did You Mean? </h2>
+<div class="row">
+  <div class="small-8 small-centered columns">
+    <form class="search">
+      <fieldset>
+        <legend>Search</legend>
+        <label for="name">
+          Title:
+          <input type="search" name="name" placeholder="Search for beer!">
+        </label>
+        <button>Search</button>
+      </fieldset>
+    </form>
+  </div>
 </div>
-<script type="text/html" class="search-result"> 
+
+<script type="text/html" class="index"> 
    <a><%%= this.model.get("name") %></a>
 </script>
 
+<div class="all-results">
+  <h1> Did You Mean? </h1>
+    <script type="text/html" class="search-result"> 
+      <div class="small-6 small-centered columns results"> 
+        <a><%%= this.model.get("name") %></a>
+      </div>
+    </script>
+</div>
+
 <script type="text/html" class="single-beer"> 
- <p><%%= this.model.get("name") %></p>
+  <div class="row">
+    <div class="large-16 columns">
+      <h1><%%= this.model.get("name") %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <p> <span class="attributes">Style: </span> <%%= this.model.get("style") %></p>
+      <p> <span class="attributes">ABV:</span> <%%= this.model.get("abv") %>%</p>
+      <p> <span class="attributes">IBUs:</span> <%%= this.model.get("ibu") %></p>
+      <p class="organic<%%= this.model.get("isOrganic") %>"><span class="attributes">Organic?</span> <%%= this.model.get("isOrganic") %></p>
+      <p> <span class="attributes">Availability:</span> <%%= this.model.get("available") %></p>
+      <p> <span class="attributes">A Little Bit About This Beer: </span> <%%= this.model.get("description") %></p> 
+      <p><%%= this.model.get("styleDescription") %></p>
+      <p> <span class="attributes">Food Pairings: </span><%%= this.model.get("foodPairings") %></p>
+    </div>
+    <div class="large-6 columns">
+      <img src="<%%= this.model.get("label") %>" >
+      <div class="<%%= this.model.get("glass") %>"></div>
+    </div>
+  </div>
 </script>
 
 

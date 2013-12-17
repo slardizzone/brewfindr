@@ -3,9 +3,9 @@ var BeerView = Backbone.View.extend({
 
   className: "beer-view",
 
-  initialize: function() {
+  initialize: function(opts) {
     this.listenTo(this.model, "change", this.render);
-    this.model.getBeerData();
+    console.log("initialize beer view");
     this.render();
     $("body").append(this.$el);
   },

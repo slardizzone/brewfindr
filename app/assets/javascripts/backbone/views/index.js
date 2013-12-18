@@ -7,10 +7,10 @@ var IndexView = Backbone.View.extend({
     this.render();
   },
 
-  template: _.template($("script.index[type='text/html']").html()),
+  template: $("script.index[type='text/html']").html(),
 
   render: function() {
-    this.$el.html(this.template());
+    this.$el.html(this.template);
   }
 });
 

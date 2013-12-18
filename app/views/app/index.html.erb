@@ -30,17 +30,21 @@
 </div>
 
 <script type="text/html" class="index"> 
-   <a><%%= this.model.get("name") %></a>
+
 </script>
 
-<div class="all-results">
-  <h1> Did You Mean? </h1>
-    <script type="text/html" class="search-result"> 
-      <div class="small-6 small-centered columns results"> 
-        <a><%%= this.model.get("name") %></a>
-      </div>
-    </script>
-</div>
+<script type="text/html" class="all-results">
+  <div class="row all-results-view">
+    <h1> Did You Mean? </h1>
+  </div>
+  <ul class="results"></ul>
+</script>
+
+<script type="text/html" class="search-result"> 
+  <div class="small-6 small-centered columns results"> 
+    <a><%%= this.model.get("name") %></a>
+  </div>
+</script>
 
 <script type="text/html" class="single-beer"> 
   <div class="row">

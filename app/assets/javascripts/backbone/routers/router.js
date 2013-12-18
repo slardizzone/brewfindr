@@ -13,7 +13,7 @@ var Router = Backbone.Router.extend({
   search: function(name) {
     var beerResults = new BeerResults({name: name});
     this.loadView(new ResultsView({collection: beerResults}));
-    beerResults.load();
+    beerResults.loadByName();
   },
 
   getSingleBeer: function(id) {

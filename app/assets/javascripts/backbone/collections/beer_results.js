@@ -1,13 +1,14 @@
 var BeerResults = Backbone.Collection.extend({
   model: Beer,
 
-  url: "/beer/search/",
+  url: "/beers/search/",
 
   initialize: function(opts) {
     this.name = opts.name;
+    this.style = opts.style;
   },
 
-  load: function() {
+  loadByName: function() {
     this.fetch({
       data: {name: this.name},
       reset: true
@@ -15,8 +16,9 @@ var BeerResults = Backbone.Collection.extend({
   },
 
   parse: function(response) {
-    return response["data"];
+    return _.first(response["data"], 20);
   }
 });
+
 
 

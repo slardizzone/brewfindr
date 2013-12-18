@@ -19,6 +19,10 @@ body {
 
 }
 
+h1 {
+  font-size: 100px;
+}
+
 .top-bar {
   color: light-blue;
 }
@@ -37,6 +41,10 @@ p {
   color: black;
   font-weight: bold; 
   font-size: 18px;
+}
+
+.all-results-view {
+  text-align: center; 
 }
 
 .results {
@@ -65,9 +73,17 @@ img {
   background-repeat: no-repeat;
 }
 
-/*.organicN {
-  background-image: url;
-}*/
+.flute {
+  background-image: url("/assets/new_flute_glass.png");
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
 
 
 

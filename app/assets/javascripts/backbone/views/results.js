@@ -15,9 +15,8 @@ var ResultsView = Backbone.View.extend({
   },
 
   addOne: function(beerResult) {
-    console.log(beerResult)
     var view = new SingleResultView({model: beerResult});
-    this.$el.find("ul").append(view.el);
+    this.$el.find(".results").append(view.el);
   },
 
   render: function() {

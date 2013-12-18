@@ -41,7 +41,7 @@
 </script>
 
 <script type="text/html" class="search-result"> 
-  <div class="small-6 small-centered columns results"> 
+  <div class="small-6 small-centered columns"> 
     <a><%%= this.model.get("name") %></a>
   </div>
 </script>
@@ -63,11 +63,16 @@
       <p><%%= this.model.get("styleDescription") %></p>
       <p> <span class="attributes">Food Pairings: </span><%%= this.model.get("foodPairings") %></p>
     </div>
-    <div class="large-6 columns">
+    <div class="large-6 columns extra-info">
       <img src="<%%= this.model.get("label") %>" >
       <div class="<%%= this.model.get("glass") %>"></div>
+      <h3> If you enjoy this beer you might want to try these! </h3>
     </div>
   </div>
+</script>
+
+<script type="text/html" class="single-rec-result"> 
+  <a><%%= this.model.get('name') %></a>,
 </script>
 
 

@@ -32,8 +32,11 @@ var Result = Beer.extend({
 
     var recommendations = new Recommendations({id: beer["data"]["style"]["id"]});
     console.log("Loading..." + recommendations);
-    this.loadView(new RecommendationsView({collection: recommendations}));
     recommendations.load();
-  }
+    new RecommendationsView({collection: recommendations});
+  },
+
+
+
 });
 

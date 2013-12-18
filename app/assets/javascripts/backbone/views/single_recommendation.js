@@ -1,8 +1,11 @@
-var SingleResultView = Backbone.View.extend({
+var SingleRecommendationView = Backbone.View.extend({
   tagName: "li",
+  className: "recommendations",
 
   initialize: function(opts) {
-    this.render(); 
+    this.render();
+    this.name = this.model.get('name')
+    console.log(this.name)
   },
 
   events: {
@@ -10,16 +13,15 @@ var SingleResultView = Backbone.View.extend({
   },
 
   goToSingleBeer: function() {
-    console.log("Navigating to single beer...")
     var id = this.model.get('id');
+    var beerResult = this.model
     Backbone.history.navigate("/beer/"+ encodeURI(id), {trigger: true});
   },
 
-  template: _.template($("script.search-result[type='text/html']").html()),
+  template: _.template($("script.single-rec-result[type='text/html']").html()),
 
   render: function() {
     this.$el.html(this.template());
   }
+  
 });
-
- 

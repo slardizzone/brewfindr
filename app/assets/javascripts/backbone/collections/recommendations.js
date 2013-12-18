@@ -15,8 +15,8 @@ var Recommendations = Backbone.Collection.extend({
   },
 
   parse: function(response) {
-    console.log(_.sample(response["data"], 5))
-    return _.sample(response["data"], 5)
+    console.log(_.sample(response["data"], 10))
+    return _.sample(response["data"], 10)
   }
 
 });

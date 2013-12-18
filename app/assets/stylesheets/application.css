@@ -78,6 +78,17 @@ img {
   background-repeat: no-repeat;
 }
 
+.recommendation-list {
+  margin: 0;
+  list-style: none;
+  font-size: 20px;
+}
+
+.recommendations {
+  float: left;
+  margin-right: 18px;
+}
+
 
 
 

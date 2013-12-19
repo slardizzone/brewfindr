@@ -15,19 +15,28 @@ var Result = Beer.extend({
 
   receiveBeer: function(beer) {
     console.log(beer)
-   
-    this.set({name:         beer["data"]["name"],
-              abv:          beer["data"]["abv"],
-              glass:        beer["data"]["glass"]["name"].toLowerCase(),
-              available:    beer["data"]["available"]["name"],
-              style:        beer["data"]["style"]["name"],
-              label:        beer["data"]["labels"]["medium"],
-              isOrganic:    beer["data"]["isOrganic"],
-              description:  beer["data"]["description"],
-              styleDescription: beer["data"]["style"]["description"],
-              ibu:          beer["data"]["ibu"],
-              foodPairings: beer["data"]["foodPairings"],
-              styleId:      beer["data"]["style"]["id"]
+    console.log(beer["data"])
+    
+    beer["data"]["glass"] =     beer["data"]["glass"]     || {};
+    beer["data"]["glass"]["name"] = beer["data"]["glass"]["name"] || "";
+    beer["data"]["available"] = beer["data"]["available"] || {};
+    beer["data"]["style"] =     beer["data"]["style"]     || {};
+    beer["data"]["labels"] =    beer["data"]["labels"]    || {};
+
+    console.log(beer["data"]["glass"]["name"])
+
+    this.set({name:         beer["data"]["name"]                        || "N/A",
+              abv:          beer["data"]["abv"]                         || "N/A",
+              glass:        beer["data"]["glass"]["name"].toLowerCase() || "pint",
+              available:    beer["data"]["available"]["name"]           || "N/A",
+              style:        beer["data"]["style"]["name"]               || "N/A",
+              label:        beer["data"]["labels"]["medium"]            || "http://placekitten.com/266/266",
+              isOrganic:    beer["data"]["isOrganic"]                   || "N/A",
+              description:  beer["data"]["description"]                 || "N/A",
+              styleDescription: beer["data"]["style"]["description"]    || "N/A",
+              ibu:          beer["data"]["ibu"]                         || "N/A",
+              foodPairings: beer["data"]["foodPairings"]                || "N/A",
+              styleId:      beer["data"]["style"]["id"]                 || "N/A"
     });
 
     var recommendations = new Recommendations({id: beer["data"]["style"]["id"]});

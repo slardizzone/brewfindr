@@ -78,6 +78,24 @@ img {
   background-repeat: no-repeat;
 }
 
+.pilsner {
+  height: 400px;
+  background-image: url("/assets/pilsner.png");
+  background-repeat: no-repeat;
+}
+
+.snifter {
+  height: 400px;
+  background-image: url("/assets/snifter.png");
+  background-repeat: no-repeat;
+}
+
+.tulip {
+  height: 400px;
+  background-image: url("/assets/tulip.png");
+  background-repeat: no-repeat;
+}
+
 .recommendation-list {
   margin: 0;
   list-style: none;

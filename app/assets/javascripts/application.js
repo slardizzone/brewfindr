@@ -43,6 +43,6 @@ $(document).ready(function() {
   $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
     .delay(3400)
     .animate({
-      bottom: '200px'
+      bottom: '183px'
       }, 2500);
   });

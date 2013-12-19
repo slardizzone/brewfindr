@@ -1,12 +1,61 @@
+@font-face {
+    font-family: 'catullregular';
+    src: url('catull-webfont.eot');
+    src: url('catull-webfont.eot?#iefix') format('embedded-opentype'),
+         url('catull-webfont.woff') format('woff'),
+         url('catull-webfont.ttf') format('truetype'),
+         url('catull-webfont.svg#catullregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-body { background-color: #0e83cd }
+}
+
+body { background-color: white }
+
+/*#0e83cd*/
+
+.blue {
+  color: #0266C8;
+}
+
+.green {
+  color: #F90101;
+}
+
+.yellow {
+  color: #F2B50F;
+}
+
+.red {
+  color: #00933B;
+}
 
 h1 {
   font-size: 100px;
 }
 
-.top-bar {
-  color: light-blue;
+button {
+  margin: 0;
+}
+
+fieldset {
+  margin: 5px;
+  padding: 0px;
+  border: none;
+}
+
+input {
+  border: none;
+}
+
+.title-div {
+  text-align: center;
+}
+
+.title {
+  font-family: 'catullregular';
+  font-size: 125px;
+  margin: 0;
 }
 
 .results a {
@@ -78,6 +127,12 @@ img {
   background-repeat: no-repeat;
 }
 
+.goblet {
+  height: 400px;
+  background-image: url("/assets/goblet.png");
+  background-repeat: no-repeat;
+}
+
 .recommendation-list {
   margin: 0;
   list-style: none;
@@ -90,15 +145,6 @@ img {
 }
 
 /*BEERCSS*/
-h2 {
-  margin: 0 auto;
-  width: 400px;
-  font-size: 36px;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  color: whiteSmoke;
-}
-
 #container {
   height: 370px;
   width: 400px;
@@ -135,9 +181,9 @@ h2 {
   border-bottom: 0;
   border-radius: 30px 30px 0 0;
   content: '';
-  height: 30px;
+  height: 14px;
   position: absolute;
-  top: -30px;
+  top: -11px;
   width: 30px;
 }
 
@@ -236,7 +282,7 @@ h2 {
   width: 50px;
   height: 50px;
   border-radius: 30px;
-  background-color: #fefefe;
+  background-color: #E4E4E4;
 }
 .foam-1 {
   top: -30px;

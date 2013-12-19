@@ -1,28 +1,11 @@
-== README
+## BREWGLE 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Brewgle is a web application built on the Ruby on Rails framework that allows users to easily search beers and retrieve relevant information about them. Brewgle also provides users recommendations based on style preferences. Moving forward, users will be able to rate beers and begin a discussion regarding each style/beer/and brewery. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# FRAMEWORKS/LIBRARIES
+* Foundation
+* Jquery
+* Underscore
+* Backbone 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

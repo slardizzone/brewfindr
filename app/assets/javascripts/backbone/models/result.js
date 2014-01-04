@@ -1,4 +1,7 @@
 var Result = Beer.extend({
+
+  url: "/beers/",
+
   initialize: function() {
     this.getBeerData();
   },
@@ -14,8 +17,6 @@ var Result = Beer.extend({
   },
 
   receiveBeer: function(beer) {
-    console.log(beer)
-    console.log(beer["data"])
     
     beer["data"]["glass"] =     beer["data"]["glass"]     || {};
     beer["data"]["glass"]["name"] = beer["data"]["glass"]["name"] || "";

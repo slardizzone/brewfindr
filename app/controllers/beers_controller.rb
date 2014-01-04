@@ -10,6 +10,16 @@ class BeersController < ApplicationController
     parsed = JSON(response)
     render json: parsed
   end
+
+   def create
+    @beer = Beer.new(beer_params)
+
+    if @beer.save
+      render json: @beer
+    else
+      render json: @beer.errors, status: :unprocessable_entity
+    end
+  end
   
   def search
     encoded = URI.encode(params[:name])
@@ -27,7 +37,11 @@ class BeersController < ApplicationController
     render json: parsed
   end
 
+  private 
+
+  def beer_params
+    params.permit(:name, :api_id)
+  end
+
 end
 
-
-# http://www.brewerydb.com/api/beers?style_id=49 

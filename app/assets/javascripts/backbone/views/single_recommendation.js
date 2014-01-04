@@ -5,7 +5,6 @@ var SingleRecommendationView = Backbone.View.extend({
   initialize: function(opts) {
     this.render();
     this.name = this.model.get('name')
-    console.log(this.name)
   },
 
   events: {

@@ -6,13 +6,32 @@ var SingleResultView = Backbone.View.extend({
   },
 
   events: {
-    "click" : "goToSingleBeer"
+    "click" : function(e) {
+      this.goToSingleBeer(e);
+      this.printBeer(e);
+    }
   },
 
   goToSingleBeer: function() {
-    console.log("Navigating to single beer...")
     var id = this.model.get('id');
     Backbone.history.navigate("/beer/"+ encodeURI(id), {trigger: true});
+  },
+
+  printBeer: function() {
+    console.log({name: this.model.get("name"), api_id: this.model.get("id")})
+
+    $.ajax({
+      type: "POST",
+      url: "/beers/",
+      data: {name: this.model.get("name"), api_id: this.model.get("id")},
+      dataType: "JSON",
+      success: this.hello,
+      context: this
+    });
+  },
+
+  hello: function() {
+    console.log("HELLO THERE!")
   },
 
   template: _.template($("script.search-result[type='text/html']").html()),

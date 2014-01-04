@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'bcrypt-ruby', '~> 3.0.0'
+
 gem 'rails_12factor', group: :production
 
 gem 'foundation-rails'

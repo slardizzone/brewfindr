@@ -6,4 +6,7 @@ Brewfindr::Application.routes.draw do
       get 'style'
     end
   end
+
+  resources :users
+  resource :session, only: [:new, :create, :destroy]
 end

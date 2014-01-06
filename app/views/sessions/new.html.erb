@@ -1,0 +1,16 @@
+<div class="login_form">
+  <h1>Log In</h1>
+    <div class="user-form">
+      <%= form_tag session_path, :method => :post do %>
+        <%= label_tag :email %>
+        <%= text_field_tag :email %>
+
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+
+        <%= submit_tag "Login" %>
+      <% end %>
+      <%= link_to "Not a user? Sign up!", new_user_path, class: "sign-up" %>
+   </div>
+  </div>
+</div>

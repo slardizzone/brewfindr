@@ -17,6 +17,8 @@ var Result = Beer.extend({
   },
 
   receiveBeer: function(beer) {
+
+    console.log(beer)
     
     beer["data"]["glass"] =     beer["data"]["glass"]     || {};
     beer["data"]["glass"]["name"] = beer["data"]["glass"]["name"] || "";
@@ -43,7 +45,7 @@ var Result = Beer.extend({
     new RecommendationsView({collection: recommendations});
     new MapView({latitude: beer["data"]["breweries"][0]["locations"][0]["latitude"],
                  longitude: beer["data"]["breweries"][0]["locations"][0]["longitude"]});
-  },
+  }
 
 
 

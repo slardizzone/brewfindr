@@ -9,7 +9,6 @@ var Router = Backbone.Router.extend({
     this.loadView(new IndexView)
   },
 
-
   search: function(name) {
     var beerResults = new BeerResults({name: name});
     this.loadView(new ResultsView({collection: beerResults}));
@@ -18,9 +17,10 @@ var Router = Backbone.Router.extend({
 
   getSingleBeer: function(id) {
     var result = new Result({id: id});
+    var favorite = new Favorite({id: id});
+    new FavoriteButtonView({model: favorite});
     this.loadView(new BeerView({model: result}));
   },
-
 
   loadView: function(view) {
     this.main && this.main.remove();

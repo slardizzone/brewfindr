@@ -10,12 +10,20 @@
   },
 
   events: {
-    "click button":"createBeer"
+    "click button":"createFavorite"
   },
 
-  createBeer: function() {
-    this.model.save({name: this.model.get("name"), api_id: this.model.get("id")})
-    // this.model.save({name: });
+  createFavorite: function() {
+    var button = $('button')
+
+    $.ajax({
+      type: "POST",
+      url: "/favorites/",
+      data: {beer_id: this.model.get("id")},
+      dataType: "JSON",
+      success: button.text("Saved!"),
+      context: this
+    });
   },
 
   template: _.template($("script.single-beer[type='text/html']").html()),

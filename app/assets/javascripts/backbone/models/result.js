@@ -24,8 +24,6 @@ var Result = Beer.extend({
     beer["data"]["style"] =     beer["data"]["style"]     || {};
     beer["data"]["labels"] =    beer["data"]["labels"]    || {};
 
-    console.log(beer["data"]["glass"]["name"])
-
     this.set({name:         beer["data"]["name"]                        || "N/A",
               abv:          beer["data"]["abv"]                         || "N/A",
               glass:        beer["data"]["glass"]["name"].toLowerCase() || "pint",
@@ -41,9 +39,10 @@ var Result = Beer.extend({
     });
 
     var recommendations = new Recommendations({id: beer["data"]["style"]["id"]});
-    console.log("Loading..." + recommendations);
     recommendations.load();
     new RecommendationsView({collection: recommendations});
+    new MapView({latitude: beer["data"]["breweries"][0]["locations"][0]["latitude"],
+                 longitude: beer["data"]["breweries"][0]["locations"][0]["longitude"]});
   },
 
 

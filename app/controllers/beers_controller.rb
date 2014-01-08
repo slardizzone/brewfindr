@@ -5,7 +5,7 @@ class BeersController < ApplicationController
   end
 
   def show
-    url = "http://api.brewerydb.com/v2/beer/#{params[:id]}/?key=4145e4b2fa348277850d53216d0bd863"
+    url = "http://api.brewerydb.com/v2/beer/#{params[:id]}/?withBreweries=Y&withSocialAccounts=Y&key=4145e4b2fa348277850d53216d0bd863"
     response = HTTParty.get(url)
     parsed = JSON(response)
     render json: parsed

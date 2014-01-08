@@ -83,13 +83,13 @@ p {
  text-align: center;
 }
 
-img {
+/*img {
   text-align: center;
   margin-left: 65px;
   margin-bottom: 20px;
   border-radius: 50%;
   border: 5px solid black;
-}
+}*/
 
 .pint {
   height: 400px;
@@ -143,6 +143,18 @@ img {
   float: left;
   margin-right: 18px;
 }
+
+/* MAPCSS */
+#map-canvas { height: 700px;   }
+#map-canvas img{max-width: inherit;}
+
+.gm-style img {
+    max-width: none;
+  }
+
+  .gm-style label {
+    width: auto; display:inline;
+  }
 
 /*BEERCSS*/
 #container {

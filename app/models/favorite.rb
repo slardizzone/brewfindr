@@ -1,4 +1,5 @@
 class Favorite < ActiveRecord::Base
+  validates_presence_of :user_id, :beer_id
   validates_uniqueness_of :user_id, :scope => :beer_id
 
   belongs_to :user

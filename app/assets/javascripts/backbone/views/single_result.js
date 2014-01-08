@@ -8,7 +8,7 @@ var SingleResultView = Backbone.View.extend({
   events: {
     "click" : function(e) {
       this.goToSingleBeer(e);
-      this.printBeer(e);
+      this.createBeer(e);
     }
   },
 
@@ -17,9 +17,7 @@ var SingleResultView = Backbone.View.extend({
     Backbone.history.navigate("/beer/"+ encodeURI(id), {trigger: true});
   },
 
-  printBeer: function() {
-    console.log({name: this.model.get("name"), api_id: this.model.get("id")})
-
+  createBeer: function() {
     $.ajax({
       type: "POST",
       url: "/beers/",

@@ -16,11 +16,23 @@ body { background-color: white }
   border-radius: 50%;
 }
 
-.result-details li {
+.result-list-item {
+  display: block;
+}
+
+.result-details {
+  margin: 10px 0;
+  width: 100%;
+  float: left;
   list-style: none;
 }
 
-/*#0e83cd*/
+.result-details li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 18px;
+  float: left;
+}
 
 .blue {
   color: #0266C8;
@@ -66,10 +78,6 @@ input {
   margin: 0;
 }
 
-.results a {
-  font-size: 30px;
-  text-align: center;
-}
 
 p {
  font-size: 16px;
@@ -91,13 +99,13 @@ p {
  text-align: center;
 }
 
-/*img {
+.beer-label {
   text-align: center;
   margin-left: 65px;
   margin-bottom: 20px;
   border-radius: 50%;
   border: 5px solid black;
-}*/
+}
 
 .pint {
   height: 400px;

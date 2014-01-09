@@ -1,5 +1,6 @@
 var SingleResultView = Backbone.View.extend({
   tagName: "li",
+  className: "result-list-item",
 
   initialize: function(opts) {
     this.render(); 

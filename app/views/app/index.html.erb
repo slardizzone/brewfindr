@@ -70,7 +70,9 @@
   <div class="row all-results-view">
     <h1> Did You Mean? </h1>
   </div>
+  <div class="small-10 large-centered columns">
   <ul class="results"></ul>
+  </div>
 </script>
 
 <script type="text/html" class="search-result"> 
@@ -105,7 +107,7 @@
       <p> <span class="attributes">Food Pairings: </span><%%= this.model.get("foodPairings") %></p>
     </div>
     <div class="large-6 columns extra-info">
-      <img src="<%%= this.model.get("label") %>" >
+      <img class="beer-label" src="<%%= this.model.get("label") %>" >
       <div class="<%%= this.model.get("glass") %>"></div>
       <h3> If you enjoy this beer you might want to try these! </h3>
     </div>

@@ -1,5 +1,5 @@
 var BeerResults = Backbone.Collection.extend({
-  model: Beer,
+  model: Test,
 
   url: "/beers/search/",
 

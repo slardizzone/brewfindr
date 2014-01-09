@@ -6,11 +6,16 @@
   initialize: function() {
     this.listenTo(this.model, "change", this.render);
     this.render();
-    $("body").append(this.$el);
   },
 
   events: {
-    "click button":"createFavorite"
+    "click button":"createFavorite",
+    "click a.modal":"openModal",
+  },
+
+  openModal: function() {
+    new ModalView();
+    $('#myModal').foundation('reveal', 'open');
   },
 
   createFavorite: function() {
@@ -21,7 +26,7 @@
       url: "/favorites/",
       data: {beer_id: this.model.get("id")},
       dataType: "JSON",
-      success: button.text("Saved!"),
+      success: button.text("Saved!")  ,
       context: this
     });
   },

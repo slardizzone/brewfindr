@@ -18,7 +18,6 @@ var Router = Backbone.Router.extend({
   getSingleBeer: function(id) {
     var result = new Result({id: id});
     var favorite = new Favorite({id: id});
-    new FavoriteButtonView({model: favorite});
     this.loadView(new BeerView({model: result}));
   },
 

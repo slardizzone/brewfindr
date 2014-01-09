@@ -74,12 +74,20 @@
 </script>
 
 <script type="text/html" class="search-result"> 
-  <div class="small-6 small-centered columns"> 
-    <a><%%= this.model.get("name") %></a>
-  </div>
+    <ul class="result-details">
+      <li> <img class="result-icons" src="<%%= this.model.get("icon") %>"%> </li>
+      <li> <a><%%= this.model.get("name") %></a> </li>
+      <li> <%%= this.model.get("style")["name"] %> </li>
+    </ul>
 </script>
 
 <script type="text/html" class="single-beer"> 
+  <div id="myModal" class="reveal-modal" data-reveal>
+    <h2><%%= this.model.get("style") %></h2>
+    <p><%%= this.model.get("styleDescription") %></p>
+    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
   <div class="row">
     <div class="large-16 columns">
       <h1><%%= this.model.get("name") %></h1>
@@ -88,13 +96,12 @@
   <div class="row">
       <div class="large-6 columns">
       <button> Add to Favorites! </button>
-      <p> <span class="attributes">Style: </span> <%%= this.model.get("style") %></p>
+      <p> <span class="attributes">Style: </span><a class='modal' data-reveal-id="myModal"> <%%= this.model.get("style") %></a></p>
       <p> <span class="attributes">ABV:</span> <%%= this.model.get("abv") %>%</p>
       <p> <span class="attributes">IBUs:</span> <%%= this.model.get("ibu") %></p>
       <p class="organic<%%= this.model.get("isOrganic") %>"><span class="attributes">Organic?</span> <%%= this.model.get("isOrganic") %></p>
       <p> <span class="attributes">Availability:</span> <%%= this.model.get("available") %></p>
       <p> <span class="attributes">A Little Bit About This Beer: </span> <%%= this.model.get("description") %></p> 
-      <p><%%= this.model.get("styleDescription") %></p>
       <p> <span class="attributes">Food Pairings: </span><%%= this.model.get("foodPairings") %></p>
     </div>
     <div class="large-6 columns extra-info">
@@ -107,10 +114,11 @@
   <div class="row">
     <div id="map-canvas"></div>
   </div>
+
 </script>
 
 <script type="text/html" class="single-rec-result"> 
-  <a><%%= this.model.get('name') %></a>,
+  <a><%%= this.model.get('name') %></a>
 </script>
 
 

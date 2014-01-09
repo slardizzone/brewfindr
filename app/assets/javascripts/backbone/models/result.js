@@ -17,8 +17,6 @@ var Result = Beer.extend({
   },
 
   receiveBeer: function(beer) {
-
-    console.log(beer)
     
     beer["data"]["glass"] =     beer["data"]["glass"]     || {};
     beer["data"]["glass"]["name"] = beer["data"]["glass"]["name"] || "";

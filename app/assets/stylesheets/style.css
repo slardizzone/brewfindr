@@ -12,6 +12,14 @@
 
 body { background-color: white }
 
+.result-icons {
+  border-radius: 50%;
+}
+
+.result-details li {
+  list-style: none;
+}
+
 /*#0e83cd*/
 
 .blue {

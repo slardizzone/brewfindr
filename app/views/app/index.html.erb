@@ -79,7 +79,7 @@
     <ul class="result-details">
       <li> <img class="result-icons" src="<%%= this.model.get("icon") %>"%> </li>
       <li> <a><%%= this.model.get("name") %></a> </li>
-      <li> <%%= this.model.get("style")["name"] %> </li>
+      <li> <%%= this.model.get("style") %> </li>
     </ul>
 </script>
 
@@ -87,6 +87,7 @@
   <div id="myModal" class="reveal-modal" data-reveal>
     <h2><%%= this.model.get("style") %></h2>
     <p><%%= this.model.get("styleDescription") %></p>
+    <div id="map-canvas"></div>
     <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
     <a class="close-reveal-modal">&#215;</a>
   </div>
@@ -99,6 +100,7 @@
       <div class="large-6 columns">
       <button> Add to Favorites! </button>
       <p> <span class="attributes">Style: </span><a class='modal' data-reveal-id="myModal"> <%%= this.model.get("style") %></a></p>
+      <p> <span class="attributes"> Brewed By: </span> <%%= this.model.get("brewery") %> </p>
       <p> <span class="attributes">ABV:</span> <%%= this.model.get("abv") %>%</p>
       <p> <span class="attributes">IBUs:</span> <%%= this.model.get("ibu") %></p>
       <p class="organic<%%= this.model.get("isOrganic") %>"><span class="attributes">Organic?</span> <%%= this.model.get("isOrganic") %></p>
@@ -114,7 +116,7 @@
   </div>
 
   <div class="row">
-    <div id="map-canvas"></div>
+    
   </div>
 
 </script>

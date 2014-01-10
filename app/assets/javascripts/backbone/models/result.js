@@ -17,14 +17,20 @@ var Result = Beer.extend({
   },
 
   receiveBeer: function(beer) {
+
+    console.log(beer)
+
+    console.log(beer["data"]["breweries"][0]["name"])
     
-    beer["data"]["glass"] =     beer["data"]["glass"]     || {};
-    beer["data"]["glass"]["name"] = beer["data"]["glass"]["name"] || "";
-    beer["data"]["available"] = beer["data"]["available"] || {};
-    beer["data"]["style"] =     beer["data"]["style"]     || {};
-    beer["data"]["labels"] =    beer["data"]["labels"]    || {};
+    beer["data"]["breweries"][0]["name"] = beer["data"]["breweries"][0]["name"] || {}
+    beer["data"]["glass"] =                beer["data"]["glass"]     || {};
+    beer["data"]["glass"]["name"] =        beer["data"]["glass"]["name"] || "";
+    beer["data"]["available"] =            beer["data"]["available"] || {};
+    beer["data"]["style"] =                beer["data"]["style"]     || {};
+    beer["data"]["labels"] =               beer["data"]["labels"]    || {};
 
     this.set({name:         beer["data"]["name"]                        || "N/A",
+              brewery:      beer["data"]["breweries"][0]["name"]        || "N/A",
               abv:          beer["data"]["abv"]                         || "N/A",
               glass:        beer["data"]["glass"]["name"].toLowerCase() || "pint",
               available:    beer["data"]["available"]["name"]           || "N/A",

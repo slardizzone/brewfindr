@@ -77,18 +77,22 @@
 
 <script type="text/html" class="search-result"> 
     <ul class="result-details">
-      <li> <img class="result-icons" src="<%%= this.model.get("icon") %>"%> </li>
+      <li> <img class="result-icons" src="<%%= this.model.get("icon") %>" width="80"%> </li>
       <li> <a><%%= this.model.get("name") %></a> </li>
       <li> <%%= this.model.get("style") %> </li>
     </ul>
 </script>
 
 <script type="text/html" class="single-beer"> 
-  <div id="myModal" class="reveal-modal" data-reveal>
+  <div id="style-modal" class="reveal-modal" data-reveal>
     <h2><%%= this.model.get("style") %></h2>
     <p><%%= this.model.get("styleDescription") %></p>
-    <div id="map-canvas"></div>
-    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+    <canvas id="abv-chart" width="300" height="400"></canvas>
+    <canvas id="srm-chart" width="300" height="400"></canvas>
+    <canvas id="ibu-chart" width="300" height="400"></canvas>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <div id="brewery-modal" class="reveal-modal" data-reveal>
     <a class="close-reveal-modal">&#215;</a>
   </div>
   <div class="row">
@@ -97,20 +101,26 @@
     </div>
   </div>
   <div class="row">
-      <div class="large-6 columns">
-      <button> Add to Favorites! </button>
-      <p> <span class="attributes">Style: </span><a class='modal' data-reveal-id="myModal"> <%%= this.model.get("style") %></a></p>
-      <p> <span class="attributes"> Brewed By: </span> <%%= this.model.get("brewery") %> </p>
-      <p> <span class="attributes">ABV:</span> <%%= this.model.get("abv") %>%</p>
-      <p> <span class="attributes">IBUs:</span> <%%= this.model.get("ibu") %></p>
-      <p class="organic<%%= this.model.get("isOrganic") %>"><span class="attributes">Organic?</span> <%%= this.model.get("isOrganic") %></p>
-      <p> <span class="attributes">Availability:</span> <%%= this.model.get("available") %></p>
-      <p> <span class="attributes">A Little Bit About This Beer: </span> <%%= this.model.get("description") %></p> 
-      <p> <span class="attributes">Food Pairings: </span><%%= this.model.get("foodPairings") %></p>
+      <div class="large-7 columns">
+        <h3> Style: <a class='style-modal' data-reveal-id="style-modal"> <%%= this.model.get("style") %></a></h3>           
+        <h3> ABV: <%%= this.model.get("abv") %>% </h3> 
+        <h3> IBUs: <%%= this.model.get("ibu") %></h3>
+        <h3> Organic? <%%= this.model.get("isOrganic") %></h3>
+        <h3> Availability: <%%= this.model.get("available") %></h3>
+        <h3> A Little Bit About This Beer: </h3>
+          <p><%%= this.model.get("description") %></p> 
+        <h3> Food Pairings: </h3> 
+          <p><%%= this.model.get("foodPairings") %></p>
+       <button> Add to Favorites! </button>
     </div>
-    <div class="large-6 columns extra-info">
+    <div class="large-5 columns extra-info">
       <img class="beer-label" src="<%%= this.model.get("label") %>" >
-      <div class="<%%= this.model.get("glass") %>"></div>
+      <h3> Brewed at <%%= this.model.get("brewery") %> </h3>
+      <ul class="brewery-address">
+        <li> <%%= this.model.get("breweryStreet") %> </li>
+        <li> <%%= this.model.get("breweryCity") %>, <%%= this.model.get("breweryState") %> <%%=this.model.get("breweryZip") %> </li>
+      </ul>
+      <div id="map-canvas"/>
       <h3> If you enjoy this beer you might want to try these! </h3>
     </div>
   </div>

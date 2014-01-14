@@ -1,0 +1,32 @@
+
+<!-- saved from url=(0059)http://www.picresize.com/popup.html?images/rsz_beer_mug.png -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>Picture</title>
+ <script language="javascript">
+   var arrTemp=self.location.href.split("?");
+   var picUrl = (arrTemp.length>0)?arrTemp[1]:"";
+   var NS = (navigator.appName=="Netscape")?true:false;
+
+     function FitPic() {
+       iWidth = (NS)?window.innerWidth:document.body.clientWidth;
+       iHeight = (NS)?window.innerHeight:document.body.clientHeight;
+       iWidth = document.images[0].width - iWidth;
+       iHeight = document.images[0].height - iHeight;
+       if (NS){
+       window.resizeBy(iWidth + 10, iHeight + 5);
+       }
+       else{
+       window.resizeBy(iWidth,iHeight);
+       }      
+
+       self.focus();
+     };
+ </script>
+</head>
+<body bgcolor="#000000" onload="FitPic();" topmargin="0" marginheight="0" leftmargin="0" marginwidth="0"> <center><a href="" onclick="window.close();">
+ <script language="javascript">
+ document.write( "<img src='" + picUrl + "' border=0>" );
+ </script><img src="./Picture_files/rsz_beer_mug.png" border="0"></a></center>
+
+
+</body></html>

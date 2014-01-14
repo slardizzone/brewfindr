@@ -10,12 +10,18 @@
 
   events: {
     "click button":"createFavorite",
-    "click a.modal":"openModal",
+    "click a.style-modal":"openStyleModal",
+    "click a.brewery-modal":"openBreweryModal"
   },
 
-  openModal: function() {
-    new ModalView();
-    $('#myModal').foundation('reveal', 'open');
+  openStyleModal: function() {
+    new StyleModalView();
+    $('#style-modal').foundation('reveal', 'open');
+  },
+
+  openBreweryModal: function() {
+    new BreweryModalView();
+    $('#brewery-modal').foundation('reveal', 'open');
   },
 
   createFavorite: function() {

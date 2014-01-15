@@ -32,7 +32,7 @@ var Result = Beer.extend({
               glass:        beer["data"]["glass"]["name"].toLowerCase()                   || "pint",
               available:    beer["data"]["available"]["name"]                             || "N/A",
               style:        beer["data"]["style"]["name"]                                 || "N/A",
-              label:        beer["data"]["labels"]["medium"]                              || "/assets/no_image.jpg",
+              label:        beer["data"]["labels"]["medium"]                              || <%= asset_path "no_image.png" %>,
               isOrganic:    beer["data"]["isOrganic"]                                     || "N/A",
               description:  beer["data"]["description"]                                   || "N/A",
               styleDescription: beer["data"]["style"]["description"]                      || "N/A",

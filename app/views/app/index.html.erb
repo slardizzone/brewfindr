@@ -9,7 +9,6 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="#">About BrewFindr</a></li>
        <li class="has-dropdown">
         <a href="#">Account</a>
         <ul class="dropdown">
@@ -102,7 +101,12 @@
   </div>
   <div class="row">
       <div class="large-7 columns">
-        <h3> Style: <a class='style-modal' data-reveal-id="style-modal"> <%%= this.model.get("style") %></a></h3>           
+
+        <h3> Style: <a class='style-modal' data-reveal-id="style-modal"> <%%= this.model.get("style") %></a></h3>
+        <div class="glass">     
+          <h3 style="float:left"> Served In: </h3> 
+          <div class="<%%= this.model.get("glass") %>"/>
+        </div>      
         <h3> ABV: <%%= this.model.get("abv") %>% </h3> 
         <h3> IBUs: <%%= this.model.get("ibu") %></h3>
         <h3> Organic? <%%= this.model.get("isOrganic") %></h3>
@@ -111,7 +115,8 @@
           <p><%%= this.model.get("description") %></p> 
         <h3> Food Pairings: </h3> 
           <p><%%= this.model.get("foodPairings") %></p>
-       <button> Add to Favorites! </button>
+           <h3> If you enjoy this beer you might want to try these! </h3>
+  
     </div>
     <div class="large-5 columns extra-info">
       <img class="beer-label" src="<%%= this.model.get("label") %>" >
@@ -121,11 +126,10 @@
         <li> <%%= this.model.get("breweryCity") %>, <%%= this.model.get("breweryState") %> <%%=this.model.get("breweryZip") %> </li>
       </ul>
       <div id="map-canvas"/>
-      <h3> If you enjoy this beer you might want to try these! </h3>
     </div>
   </div>
 
-  <div class="row">
+  
     
   </div>
 

@@ -6,8 +6,6 @@ var Test = Backbone.Model.extend({
     var style = this.get("style") || {}
     var new_style = style["name"] || "Style Not Available"
     this.set({icon: icon, style: new_style});
-
-    // beer["data"]["glass"] =     beer["data"]["glass"]     || {};
   }
  
 });

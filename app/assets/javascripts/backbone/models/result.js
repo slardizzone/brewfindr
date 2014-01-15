@@ -18,13 +18,6 @@ var Result = Beer.extend({
 
   receiveBeer: function(beer) {
 
-    console.log(beer)
-    console.log(beer["data"]["breweries"][0]["locations"][0]["streetAddress"])
-    console.log(beer["data"]["breweries"][0]["locations"][0]["locality"])
-    console.log(beer["data"]["breweries"][0]["locations"][0]["region"])
-    console.log(beer["data"]["breweries"][0]["locations"][0]["postalCode"])
-    console.log(beer["data"]["breweries"][0]["locations"][0]["phone"])
-    
     beer["data"]["breweries"][0]["name"] = beer["data"]["breweries"][0]["name"] || {}
     beer["data"]["glass"] =                beer["data"]["glass"]     || {};
     beer["data"]["glass"]["name"] =        beer["data"]["glass"]["name"] || "";
@@ -67,6 +60,8 @@ var Result = Beer.extend({
 
     new SrmChartView({srmMin: beer["data"]["style"]["srmMin"],
                       srmMax: beer["data"]["style"]["srmMax"]});
+
+    new AbvView();
   }
 
 

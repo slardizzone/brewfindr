@@ -5,9 +5,6 @@ var AbvChartView = Backbone.View.extend({
 
   var abvMin = opts.abvMin
   var abvMax = opts.abvMax
-
-  console.log(abvMin)
-  console.log(abvMax)
   //Get context with jQuery - using jQuery's .get() method.
   var ctx = $("#abv-chart").get(0).getContext("2d");
 

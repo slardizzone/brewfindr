@@ -5,12 +5,8 @@ var IbuChartView = Backbone.View.extend({
 
   var ibuMin = parseInt(opts.ibuMin)
   var ibuMax = parseInt(opts.ibuMax)
-  console.log(ibuMin)
-  console.log(ibuMax)
-  //Get context with jQuery - using jQuery's .get() method.
+ 
   var ctx = $("#ibu-chart").get(0).getContext("2d");
-
-//This will get the first returned node in the jQuery collection.
 
   var data = {
     labels : ["IBU Min/Max"],

@@ -27,6 +27,7 @@ Backbone.history.start();
 $(function(){ $(document).foundation(); });
 
 $(document).ready(function() {
+
   $('.pour') //Pour Me Another Drink, Bartender!
     .delay(2000)
     .animate({
@@ -46,4 +47,6 @@ $(document).ready(function() {
     .animate({
       bottom: '183px'
       }, 2500);
-  });
+});
+
+

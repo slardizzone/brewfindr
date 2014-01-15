@@ -4,7 +4,7 @@ var RecommendationsView = Backbone.View.extend({
 
   initialize: function(opts) {
     this.listenTo(this.collection, "reset", this.addAll);
-    $(".extra-info").append(this.$el);
+    $(".main-info").append(this.$el);
   },
 
   addAll: function() {

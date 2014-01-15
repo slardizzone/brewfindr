@@ -43,9 +43,15 @@
 }
 
 .result-details li {
-  /*display: inline;*/
-  font-size: 18px;
-  /*float: left;*/
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.result-details li:last-of-type {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
 }
 
 .blue {
@@ -92,10 +98,18 @@ input {
   margin: 0;
 }
 
+.beer-view {
+  margin-bottom: 100px;
+}
 
-p {
+.main-info p {
  font-size: 16px;
+ margin-bottom: 10px;
  color: grey;
+}
+
+.main-info h3 {
+  margin: 7px 0px;
 }
 
 .glass {
@@ -130,7 +144,7 @@ p {
   float: left;
   height: 50px;
   width: 50px;
-  background-image: url("/assets/rsz_new_pint.png");
+  background-image: url(<%= asset_path 'new_pint.png' %>);
   background-repeat: no-repeat;
 }
 
@@ -175,7 +189,15 @@ p {
   float: left;
   width: 50px;
   height: 50px;
-  background-image: url("/assets/new_goblet.png");
+  background-image: url(<%= asset_path 'new_goblet.png' %>);
+  background-repeat: no-repeat;
+}
+
+.weizen {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/rsz_pilsner.png");
   background-repeat: no-repeat;
 }
 
